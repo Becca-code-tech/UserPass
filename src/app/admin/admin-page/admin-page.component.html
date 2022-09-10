@@ -1,0 +1,45 @@
+<form class="position-absolute top-50 start-50 translate-middle" [formGroup]="adminForm" (ngSubmit)="onSubmit($event)">
+    <div class="form-outline">
+        <label>Name: </label>
+        <input class="form-control" formControlName="name">  
+    </div>
+
+    <div class="form-outline">
+        <label>Password: </label>
+        <input class="form-control" formControlName="password" type="password">
+    </div> 
+    
+    <div>
+        <button class="btn btn-primary btn-block mb-4" routerLink="/home" [disabled]="adminForm.invalid">submit</button>
+    </div> 
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container">
+    <div class="h-100 d-flex align-items-center justify-content-center"> 
+        <form>
+        <div class="form-outline">
+                <label>Name: </label>
+                <input class="form-control">
+            </div>
+        </form> 
+    </div>
+</div> -->
+
+
+ 
+
+
+
