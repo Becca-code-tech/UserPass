@@ -1,14 +1,14 @@
-<!-- აქ უბრალოდ მარკაპს შევცვლი -->
+<!-- BekaFix3 აქ უბრალოდ მარკაპს შევცვლი -->
 <div class="container pt-5">
   <div class="row">
     <div class="col-lg-4 col-md-6 col-sm-12 mx-auto">
-        <!-- Fix1 => onSubmit ს არ სჭირდება $event (ამ შემთხვევაში) -->
+        <!-- BekaFix1 => onSubmit ს არ სჭირდება $event (ამ შემთხვევაში) -->
       <form [formGroup]="adminForm" (ngSubmit)="onSubmit()">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
-            <label>Name: </label>
-            <input class="form-control" formControlName="name" />
+            <label>Username: </label>
+            <input class="form-control mb-3" formControlName="username" />
             <label>Password: </label>
             <input
               class="form-control mb-3"
@@ -20,7 +20,7 @@
               routerLink="/home"
               [disabled]="adminForm.invalid"
             >
-              submit
+              Log In
             </button>
           </div>
         </div>

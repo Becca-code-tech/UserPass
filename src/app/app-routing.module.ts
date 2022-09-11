@@ -1,23 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdminGuardGuard } from './admin-guard.guard';
 
 const routes: Routes = [
-  { 
-    path: 'admin', 
+  {
+    path: 'admin',
     loadChildren: () =>
-      import('./admin/admin.module').then((m) => m.AdminModule)
+      import('./admin/admin.module').then((m) => m.AdminModule),
   },
   {
-    path: 'home',
-    loadChildren: () =>
-      import('./home/home.module').then((m) => m.HomeModule),
-    canActivate: [AdminGuardGuard]
-  }
+    path: '',
+    loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
+    // BekaFix4 აქ არ იყო საჭირო GUARD. გადავიტანე ადმინ მოდულის რაუტინგში.
+    // path შევცვალე ცარიელზე. ანუ საიტზე შესვლისას defult page ეს იქნება
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
