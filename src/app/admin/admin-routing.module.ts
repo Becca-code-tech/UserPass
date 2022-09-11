@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminGuard } from '../guards/admin.guard';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
-import { AdminPageComponent } from './admin-page/admin-page.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
 
 const routes: Routes = [
-  { path: '', component: AdminPageComponent },
+  { path: '', component: AdminLoginComponent },
   {
     path: 'home',
     component: AdminHomeComponent,
