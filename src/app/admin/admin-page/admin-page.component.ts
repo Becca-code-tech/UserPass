@@ -21,12 +21,9 @@ export class AdminPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(event: any){
-    event.preventDefault();
+  // Fix2 => EVENT აქედანაც წავშალე. event.preventDefault იც არ არის საჭირო
+  onSubmit(){
     console.log('submitted');
   }
-
-
- 
 }
 
