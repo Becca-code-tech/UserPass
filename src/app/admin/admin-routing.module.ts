@@ -9,7 +9,7 @@ const routes: Routes = [
   {
     path: 'home',
     component: AdminHomeComponent,
-    canActivate: /* გადმოვიტანე აქ */ [AdminGuard],
+    canActivate: /* გადმოვიტანე აქ */[AdminGuard],
   },
 ];
 
@@ -17,4 +17,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class AdminRoutingModule {}
+export class AdminRoutingModule { }
