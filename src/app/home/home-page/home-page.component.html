@@ -1,1 +1,18 @@
-<p>home-page works!</p>
+<div *ngFor="let post of Posts">
+    <div class="card">
+      <div class="card-header">
+        {{ post.title }}
+      </div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <div>
+            {{ post.description }}
+          </div>
+          <br />
+          <footer class="blockquote-footer">
+            {{ post.author }}
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
